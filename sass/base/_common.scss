@@ -1,0 +1,30 @@
+body {
+  font-family: var(--primary--fonts);
+  background: var(--white--title--color);
+  font-size: 14px;
+  color: var(--primary--color);
+  letter-spacing: 0.03em;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+p {
+  line-height: 1.71;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+

@@ -1,0 +1,42 @@
+.join {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+
+  @include tablet {
+    width: 206px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+    @include desctop {
+    margin-left: 70px;
+    width: 206px;
+    text-align: left;
+  }
+}
+
+.join__title {
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white--title--color);
+
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-top: 5px;
+  }
+
+  @include desctop {
+    margin-top: 12px;
+  }
+}
+
+.social__link--grey {
+  color: var(--white--title--color);
+  background-color: rgba(255, 255, 255, 0.1);
+
+}

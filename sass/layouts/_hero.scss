@@ -1,0 +1,70 @@
+
+.hero {
+  background: var(--hero--bg--color);
+  text-align: center;
+  
+}
+
+.ovelay {
+  max-width: 1600px;
+  background-image: var(--gradient),
+    url(../images/hero1px-mob.jpg);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include renite {
+    background-image: var(--gradient), url(../images/hero1px-mob.jpg);
+  }
+
+  @include tablet {
+    background-image: var(--gradient), url(../images/hero1px-tab.jpg);
+    
+    @include renite {
+      background-image: var(--gradient), url(../images/hero2px-tab.jpg);
+    }
+  }
+
+  @include desctop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: var(--gradient), url(../images/hero1px-des.jpg);
+
+    @include renite {
+      background-image: var(--gradient), url(../images/hero2px-des.jpg);
+    }
+  }
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: calc(42 / 26);
+    text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--white--title--color);
+ 
+  @include desctop {
+    font-size: 44px;
+    line-height: calc(60 / 44);
+    max-width: 696px;
+  }
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 216px;
+}
