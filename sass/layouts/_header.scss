@@ -13,6 +13,8 @@
   line-height: calc(28 / 24);
   letter-spacing: 0.03em;
   color: var(--logo--primary--color);
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   @include desctop {
     font-size: 26px;
@@ -151,19 +153,24 @@
   border: none;
   margin-left: auto;
 
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 40px;
+  height: 40px;
+
   @include tablet {
-    display: none;
+    display: none;  
   }
 }
 
-.mob-menu__icon {
-  fill: #00ffff;
-  transition: transform var(--transition--time);
-}
+.menu-close:hover,
+.menu-close:focus {
+  fill: var(--logo--primary--color);
+  transition: fill var(--transition--time);
 
-.mob-menu__icon:hover,
-.mob-menu__icon:focus {
-  fill: #ff00ff;
 }
 
 .mob-menu {
@@ -179,27 +186,11 @@
 
   background-color: #fff;
 
-  @include phone {
-    font-size: 34px;
-    line-height: calc(40 / 34);
-  }
+ 
 
   @include tablet {
     display: none;
   }
-}
-
-.menu-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-
-  background-color: transparent;
-  border: none;
-  margin-left: auto;
-  display: block;
-  width: 40px;
-  height: 40px;
 }
 
 .mob-menu__container {

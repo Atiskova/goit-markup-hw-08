@@ -394,6 +394,8 @@ textarea {
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: var(--logo--primary--color);
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 @media screen and (min-width: 1200px) {
   .logo {
@@ -519,6 +521,13 @@ textarea {
   background-color: transparent;
   border: none;
   margin-left: auto;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 40px;
+  height: 40px;
 }
 @media screen and (min-width: 768px) {
   .menu-open,
@@ -527,14 +536,10 @@ textarea {
   }
 }
 
-.mob-menu__icon {
-  fill: #00ffff;
-  transition: transform var(--transition--time);
-}
-
-.mob-menu__icon:hover,
-.mob-menu__icon:focus {
-  fill: #ff00ff;
+.menu-close:hover,
+.menu-close:focus {
+  fill: var(--logo--primary--color);
+  transition: fill var(--transition--time);
 }
 
 .mob-menu {
@@ -548,28 +553,10 @@ textarea {
   padding-bottom: 48px;
   background-color: #fff;
 }
-@media screen and (min-width: 480px) {
-  .mob-menu {
-    font-size: 34px;
-    line-height: 1.1764705882;
-  }
-}
 @media screen and (min-width: 768px) {
   .mob-menu {
     display: none;
   }
-}
-
-.menu-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background-color: transparent;
-  border: none;
-  margin-left: auto;
-  display: block;
-  width: 40px;
-  height: 40px;
 }
 
 .mob-menu__container {
