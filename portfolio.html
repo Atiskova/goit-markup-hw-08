@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a class="logo header__logo" href="/"
           >Web<span class="logo__part">Studio</span></a
@@ -27,7 +27,9 @@
           <ul class="site-nav list">
             <li>
               <div class="site-nav__item">
-                <a class="site-nav__link link" href="./index.html">Студія</a>
+                <a class="site-nav__link link" href="./index.html"
+                  >Студія</a
+                >
               </div>
             </li>
             <li>
@@ -45,7 +47,7 @@
           </ul>
         </nav>
         <ul class="contacts list">
-          <li>
+          <li class="contacts__item">
             <a class="contacts__link link" href="mailto:info@devstudio.com">
               <svg class="contacts__icon email" width="16px" height="12px">
                 <use href="./images/sprite.svg#icon-email"></use>
@@ -53,7 +55,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="contacts__item">
             <a class="contacts__link link" href="tel:+380961111111"
               ><svg class="contacts__icon" width="10px" height="16px">
                 <use href="./images/sprite.svg#icon-smartphone"></use>
@@ -62,8 +64,97 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg width="40" height="40" class="mob-menu__icon">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container mob-menu__container">
+          <div class="top">
+            <button type="button" class="menu-close" data-menu-close>
+              <svg class="mob-menu__icon" width="40" height="40">
+                <use href="./images/sprite.svg#icon-menu-close"></use>
+              </svg>
+            </button>
+            <nav class="nav">
+              <ul class="top__list list">
+                <li class="top__item">
+                  <div>
+                    <a class="top__link link" href="./index.html"
+                      >Студія</a
+                    >
+                  </div>
+                </li>
+                <li class="top__item">
+                  <div>
+                    <a class="top__link link current" href="./portfolio.html"
+                      >Портфоліо</a
+                    >
+                  </div>
+                </li>
+                <li class="top__item">
+                  <div>
+                    <a class="top__link link" href="#">Контакти</a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="bottom">
+            <a class="bottom__tel link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+            <a class="bottom__mail link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+            <ul class="bottom__list">
+              <li class="bottom__item">
+                <a
+                  href=""
+                  aria-label="instagram"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="bottom__socisl link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="bottom__item">
+                <a
+                  href=""
+                  aria-label="instagram"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="bottom__socisl link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="bottom__item">
+                <a
+                  href=""
+                  aria-label="instagram"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="bottom__socisl link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="bottom__item">
+                <a
+                  href=""
+                  aria-label="instagram"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="bottom__socisl link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="section">
         <div class="container">
@@ -72,7 +163,7 @@
           <ul class="filter list">
             <li class="filter__item"><button class="filter__button" type="button">Усі</button></li>
             <li class="filter__item">
-              <button class="filter__button" type="button"><span class="filter__text">Веб-сайти</span></button>
+              <button class="filter__button" type="button">Веб-сайти</button>
             </li>
             <li class="filter__item">
               <button class="filter__button" type="button">Додатки</button>
@@ -89,13 +180,36 @@
             <li class="card__item">
               <a href="" class="card__link link">
                 <div class="crad__thumb">
-                  <img
-                    class="card__photo"
-                    src="./images/project1.jpg"
-                    alt="Веб-сайт Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/1project1x-des-min.jpg 1x,
+                        ./images/1project2x-des-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/1project1x-tab-min.jpg 1x,
+                        ./images/1project2x-tab-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/1project1x-mob-min.jpg 1x,
+                        ./images/1project2x-mob-min.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="card__photo"
+                      src="./images/1project1x-mob-min.jpg"
+                      alt="Картка послуги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card__action-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -111,13 +225,36 @@
             <li class="card__item">
               <a href="" class="card__link link">
                 <div class="crad__thumb">
-                  <img
-                    class="card__photo"
-                    src="./images/project2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/2project1x-des-min.jpg 1x,
+                        ./images/2project2x-des-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/2project1x-tab-min.jpg 1x,
+                        ./images/2project2x-tab-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/2project1x-mob-min.jpg 1x,
+                        ./images/2project2x-mob-min.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="card__photo"
+                      src="./images/2project1x-mob-min.jpg"
+                      alt="Картка послуги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card__action-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -133,13 +270,36 @@
             <li class="card__item">
               <a href="" class="card__link link">
                 <div class="crad__thumb">
-                  <img
-                    class="card__photo"
-                    src="./images/project3.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/3project1x-des-min.jpg 1x,
+                        ./images/3project2x-des-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/3project1x-tab-min.jpg 1x,
+                        ./images/3project2x-tab-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/3project1x-mob-min.jpg 1x,
+                        ./images/3project2x-mob-min.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="card__photo"
+                      src="./images/3project1x-mob-min.jpg"
+                      alt="Картка послуги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card__action-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -155,13 +315,36 @@
             <li class="card__item">
               <a href="" class="card__link link">
                 <div class="crad__thumb">
-                  <img
-                    class="card__photo"
-                    src="./images/project4.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/4project1x-des-min.jpg 1x,
+                        ./images/4project2x-des-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/4project1x-tab-min.jpg 1x,
+                        ./images/4project2x-tab-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/4project1x-mob-min.jpg 1x,
+                        ./images/4project2x-mob-min.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="card__photo"
+                      src="./images/4project1x-mob-min.jpg"
+                      alt="Картка послуги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card__action-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -177,13 +360,36 @@
             <li class="card__item">
               <a href="" class="card__link link">
                 <div class="crad__thumb">
-                  <img
-                    class="card__photo"
-                    src="./images/project5.jpg"
-                    alt="Коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/5project1x-des-min.jpg 1x,
+                        ./images/5project2x-des-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/5project1x-tab-min.jpg 1x,
+                        ./images/5project2x-tab-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/5project1x-mob-min.jpg 1x,
+                        ./images/5project2x-mob-min.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="card__photo"
+                      src="./images/5project1x-mob-min.jpg"
+                      alt="Картка послуги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card__action-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -199,13 +405,36 @@
             <li class="card__item">
               <a href="" class="card__link link">
                 <div class="crad__thumb">
-                  <img
-                    class="card__photo"
-                    src="./images/project6.jpg"
-                    alt="Веб-сайт Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/6project1x-des-min.jpg 1x,
+                        ./images/6project2x-des-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/6project1x-tab-min.jpg 1x,
+                        ./images/6project2x-tab-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/6project1x-mob-min.jpg 1x,
+                        ./images/6project2x-mob-min.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="card__photo"
+                      src="./images/6project1x-mob-min.jpg"
+                      alt="Картка послуги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card__action-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -221,13 +450,36 @@
             <li class="card__item">
               <a href="" class="card__link link">
                 <div class="crad__thumb">
-                  <img
-                    class="card__photo"
-                    src="./images/project7.jpg"
-                    alt="Видання Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/7project1x-des-min.jpg 1x,
+                        ./images/7project2x-des-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/7project1x-tab-min.jpg 1x,
+                        ./images/7project2x-tab-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/7project1x-mob-min.jpg 1x,
+                        ./images/7project2x-mob-min.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="card__photo"
+                      src="./images/7project1x-mob-min.jpg"
+                      alt="Картка послуги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card__action-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -243,13 +495,36 @@
             <li class="card__item">
               <a href="" class="card__link link">
                 <div class="crad__thumb">
-                  <img
-                    class="card__photo"
-                    src="./images/project8.jpg"
-                    alt="Етикетка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/8project1x-des-min.jpg 1x,
+                        ./images/8project2x-des-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/8project1x-tab-min.jpg 1x,
+                        ./images/8project2x-tab-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/8project1x-mob-min.jpg 1x,
+                        ./images/8project2x-mob-min.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="card__photo"
+                      src="./images/8project1x-mob-min.jpg"
+                      alt="Картка послуги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card__action-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -265,13 +540,36 @@
             <li class="card__item">
               <a href="" class="card__link link">
                 <div class="crad__thumb">
-                  <img
-                    class="card__photo"
-                    src="./images/project9.jpg"
-                    alt="Додаток Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/9project1x-des-min.jpg 1x,
+                        ./images/9project2x-des-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/9project1x-tab-min.jpg 1x,
+                        ./images/9project2x-tab-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/9project1x-mob-min.jpg 1x,
+                        ./images/9project2x-mob-min.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="card__photo"
+                      src="./images/9project1x-mob-min.jpg"
+                      alt="Картка послуги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card__action-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -373,5 +671,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
