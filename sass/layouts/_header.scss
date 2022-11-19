@@ -92,9 +92,13 @@
   }
 
   @include desctop {
+    .contacts__item:first-child {
+      margin-bottom: 0;
+    }
     display: flex;
     margin-left: auto;
     gap: 30px;
+
   }
 }
 

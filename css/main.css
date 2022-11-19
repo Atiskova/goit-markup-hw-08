@@ -473,6 +473,9 @@ textarea {
     margin-left: auto;
     gap: 30px;
   }
+  .contacts .contacts__item:first-child {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__link {
